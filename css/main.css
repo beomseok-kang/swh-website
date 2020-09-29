@@ -1,6 +1,6 @@
 /* CONTENT */
 .body__container {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: rgba(85, 85, 100, 1);
@@ -57,11 +57,9 @@ a {
 }
 .summary__title {
     font-size: 38px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.25;
     margin-bottom: 18px;
-    text-shadow: 0 1px 1px rgba(0,0,80,.25),
-                 0 1px 25px rgba(0,0,80,.2);
 }
 .summary__description {
     font-size: 26px;
@@ -83,19 +81,24 @@ a {
 
 /* HEADER */
 header {
-    height: 80px;
-    background-color: rgba(245, 250, 253, 0.8);
+    position: fixed !important;
+    top: 0;
+    z-index: 1;
+    height: 60px;
+    transition: 0.3s;
 }
 header.section .inner {
     height: 100%;
     align-items: center;
 }
 header .logo {
-    height: 80px;
     display: flex;
+    height: 60px;
     align-items: center;
-    font-size: 20px;
-    font-weight: 500;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.3s;
 }
 header .logo:hover {
     color: rgba(0, 56, 234, 0.6);
@@ -120,8 +123,8 @@ header .inner .main-menu li {
     display: block;
 }
 header .inner .main-menu li a {
-    padding: 20px 20px;
-
+    padding: 20px 10px;
+    transition: 0.2s;
 }
 header .inner .main-menu li a:hover {
     color: rgba(0, 56, 234, 0.6);
@@ -131,17 +134,19 @@ header .inner .main-menu li a:hover {
 /* INTRO */
 .section--intro {
     position: relative;
-    min-height: 650px;
+    min-height: 100vh;
     background-image: url('../img/bg__write.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-.section--intro .photo--cover .inner {
-    padding: 160px 0;
-}
 .section--intro .photo--cover {
+    min-height: 100vh;
     background-color: rgba(245,245,255,0.8);
 }
+.section--intro .photo--cover .inner {
+    padding: 320px 0;
+}
+
 .section--intro .photo--cover .inner .summary .summary__title {
     text-align: center;
     color: rgba(0,0,0,1);
@@ -153,17 +158,18 @@ header .inner .main-menu li a:hover {
     display: flex;
     height: 50px;
     width: 180px;
-    margin: 70px auto 0 auto;
-    border: 2px solid rgba(85, 85, 100, 1);
+    margin: 70px auto 0;
     font-size: 18px;
     font-weight: 500;
-    color: rgba(85, 85, 100, 1);
+    color:#FFF;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    transition: 0.3s;
+    background: rgba(0, 56, 234, 1);
 }
 .section--intro .photo--cover .inner .download--btn a:hover {
-    background-color: rgba(0,0,0, 0.1);
+    background: rgba(0, 56, 234, 0.6);
 }
 
 /* DESIGN */

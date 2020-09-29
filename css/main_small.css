@@ -1,3 +1,11 @@
+
+
+.section--intro .photo--cover .inner {
+    padding: 20vh 0;
+}
+
+
+
 /* DESIGN */
 .section--design .inner {
     display: block;

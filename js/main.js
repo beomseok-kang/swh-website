@@ -1,36 +1,13 @@
-(function (window, document) {
-    'use strict';
-
-    const $toggles = document.querySelectorAll('.toggle');
-    const $header = document.querySelectorAll('.section--header');
-    const $toggleBtn = document.getElementById('toggle-btn');
-
-    $toggleBtn.addEventListener('click', function () {
-        toggleElements();
-    });
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 1024) {
-            offElements();
-        }
-    });
-
-    function toggleElements() {
-        [].forEach.call($toggles, function (toggle) {
-            toggle.classList.toggle('on');
-        });
-        [].forEach.call($header, function (toggle) {
-            toggle.classList.toggle('on');
-        });
+((window, document) => {
+  const header = document.querySelector("header");
+  const onScroll = () => {
+    if (window.scrollY === 0) {
+      header.style.background = "none";
+      header.querySelector(".logo").style.color = "#FFF";
+    } else {
+      header.style.background = "rgb(245, 250, 253)";
+      header.querySelector(".logo").style.color = "rgb(0, 56, 234)";
     }
-
-    function offElements() {
-        [].forEach.call($toggles, function (toggle) {
-            toggle.classList.remove('on');
-        });
-        [].forEach.call($header, function (toggle) {
-            toggle.classList.remove('on');
-        });
-    }
-
-})(window, document)
+  };
+  window.addEventListener("scroll", onScroll);
+})(window, document);
